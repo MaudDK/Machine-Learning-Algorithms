@@ -4,11 +4,11 @@ from models.unsupervised.kmeans import KMeans
 from utils.plotting import plot_cluster_test
 
 #Generate Clusters Dataset
-X, y = datasets.make_blobs(n_samples= 100, centers= 4, n_features= 2, random_state=42)
+X, y = datasets.make_blobs(n_samples= 100, centers= 3, n_features= 2)
 
 #Modeling
-model = KMeans(k=4)
-model.fit(X, max_iters=100)
+model = KMeans(k=3)
+model.fit(X, max_iters=1000)
 
 #Predictions
 y_pred = model.predict(X)

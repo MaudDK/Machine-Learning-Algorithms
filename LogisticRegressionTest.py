@@ -11,7 +11,6 @@ ds= datasets.load_breast_cancer()
 X, y = ds.data, ds.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-
 #Train
 logreg = LogisticRegression(n_iters=1000, learning_rate = 0.01)
 logreg.fit(X_train, y_train)
